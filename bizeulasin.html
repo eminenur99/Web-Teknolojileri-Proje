@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emine Nur Gülsu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Hakkında</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="mirasimiz.html">Mirasimiz</a></li>
+        <li><a href="sehrim.html">Şehrim</a></li>
+        <li><a class="active" href="bizeulasin.html">Bize Ulaşın</a></li>
+        <li><a href="login.html">Giriş Yap</a></li>
+      </ul>
+      
+      <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+      
+        <td width="80%" > 
+            <hr>
+            <form name="bizeulasin" method="POST" action="action.php">
+                <table cellspacing="5">
+                    <tr>
+                        <td>ADI</td>
+                        <td>:</td>
+                        <td><input type="text" name="adi">  </td> 
+
+
+                    </tr>
+                    <tr>
+                        <td>SOYAD  </td>
+                        <td>:</td>
+                        <td><input type="text" name="soyadi">  </td> 
+
+
+                    </tr>
+                    <tr>
+                        <td>CİNSİYET</td>
+                        <td>:</td>
+                        <td> <input type="radio" name="cinsiyet" >Erkek</td>
+                        <td><input type="radio" name="cinsiyet" >Kadın</td>
+                        
+                    </tr> 
+                           <tr> 
+                               <td>CEP TELEFONU</td>
+                               <td>:</td>
+                                <td> <input type="number" name="number"> </td>
+
+                           </tr>
+                    <tr>
+                        <td>E-MAİL</td>
+                        <td>:</td>
+                        <td> <input type="email"name = "email"> </td>
+
+                    </tr>
+                   
+                        <tr> 
+                        <td> PAROLA</td>
+                        <td>:</td>
+                        <td> <input type="password" name="parola"> </td>
+
+                        </tr>
+                      
+                        <td>
+ <tr>
+                        <td><input type="submit" value="GÖNDER" onclick="return iletisimKontrol();"> </td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+
+
+                </td>
+                   
+
+                </table>
+            </form>
+        </td>
+
+        <td width="80%" > 
+            <p>
+              <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96496.78541876921!2d38.30919398113531!3d40.90424331370275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40636c6b991a79b7%3A0x2409f2df5be31b5f!2sGiresun%2C%20Giresun%20Merkez%2FGiresun!5e0!3m2!1str!2str!4v1587939332475!5m2!1str!2str" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>            </p>
+        </td>
+        </tr>
+
+      </div>
+      <script>
+          function iletisimKontrol() {
+    var ad = document.forms["bizeulasin"]["adi"].value;
+    var soyad= document.forms["bizeulasin"]["soyadi"].value;
+    var cinsiyet = document.forms["bizeulasin"]["cinsiyet"].value;
+    var number = document.forms["bizeulasin"]["number"].value;
+    var email = document.forms["bizeulasin"]["email"].value;
+    var parola = document.forms["bizeulasin"]["parola"].value;
+
+      if (ad == "") {
+        alert("Ad boş bırakılamaz.");
+        return false;
+      }
+      if (soyad == "") {
+        alert("Soyad boş bırakılamaz.");
+        return false;
+      }
+      if (cinsiyet == "") {
+        alert("Cinsiyet boş bırakılamaz.");
+        return false;
+      }
+      if (number == "") {
+        alert("Numara boş bırakılamaz.");
+        return false;
+      }
+      if (email == "") {
+        alert("email boş bırakılamaz.");
+        return false;
+      }
+      if (parola == "") {
+        alert("Parola boş bırakılamaz.");
+        return false;
+      }
+  }
+      </script>
+</body>
+</html>
